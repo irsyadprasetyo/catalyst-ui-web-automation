@@ -1,6 +1,8 @@
 # Catalyst UI Automation Test
 
 [Requirements](#Requirements)
+- [Manual Test Case](#manualtc)
+- [General Questions](#gq)
 - [Install Java](#java)
 - [Install Gradle](#gradle)
 - [Install IntelliJ](#intelliJ)
@@ -51,3 +53,13 @@ You can follow instruction [here](https://www.jetbrains.com/help/idea/installati
 
 #### MacOS
 You can follow instruction [here](https://www.kenst.com/installing-chromedriver-on-mac-osx/#:~:text=The%20easiest%20way%20to%20install,seeing%20it%20returns%20a%20version.)
+
+<a name="manualtc"></a>
+## Manual Test Case
+-  [Account](https://github.com/irsyadprasetyo/catalyst-ui-web-automation/blob/master/src/test/resources/features/testcase-and-general-question/Account.txt)
+-  [Cart](https://github.com/irsyadprasetyo/catalyst-ui-web-automation/blob/master/src/test/resources/features/testcase-and-general-question/Cart.txt)
+-  [Register](https://github.com/irsyadprasetyo/catalyst-ui-web-automation/blob/master/src/test/resources/features/testcase-and-general-question/Register.txt)
+
+<a name="gq"></a>
+## General Questions
+- #### [Link Answer](https://github.com/irsyadprasetyo/catalyst-ui-web-automation/blob/master/src/test/resources/features/testcase-and-general-question/GeneralQuestions.txt) 
