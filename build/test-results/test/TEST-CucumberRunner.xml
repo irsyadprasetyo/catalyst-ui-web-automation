@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CucumberRunner" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="Icads-MacBook.local" time="0.0">
+  <properties/>
+  <system-out><![CDATA[  ?[32mGiven ?[0m?[32mUser logged into ?[0m?[32m?[1m"voila.id"?[0m                                                                                       ?[90m# steps.LoginVoilaStepDef.userLoggedInOn(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mUser verify is already logged in?[0m                                                                                    ?[90m# steps.LoginVoilaStepDef.userVerifyIsAlreadyLoggedIn()?[0m
+  ?[32mAnd ?[0m?[32mUser go to sub-menu ?[0m?[32m?[1m"SALE"?[0m                                                                                          ?[90m# steps.MenuBarStepDef.userGoToSubMenu(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mUser find product on sale page by sort:?[0m                                                                             ?[90m# steps.SaleStepDef.userFindProductOnSalePageBySort(io.cucumber.datatable.DataTable)?[0m
+  ?[32mAnd ?[0m?[32mUser choose product number ?[0m?[32m?[1m1?[0m?[32m product on sale page?[0m                                                                   ?[90m# steps.SaleStepDef.userChooseProductNumberProductOnSalePage(int)?[0m
+  ?[32mWhen ?[0m?[32mUser click + keranjang button on product page?[0m                                                                      ?[90m# steps.ProductAndCartStepDef.userClickKeranjangButtonOnProductPage()?[0m
+  ?[32mAnd ?[0m?[32mUser click ?[0m?[32m?[1m"Lihat Keranjang"?[0m?[32m button on popup product added?[0m                                                          ?[90m# steps.ProductAndCartStepDef.userClickButtonOnPopupProductAdded(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mUser click checkout button on cart page?[0m                                                                             ?[90m# steps.ProductAndCartStepDef.userClickCheckoutButtonOnCartPage()?[0m
+  ?[32mAnd ?[0m?[32mUser verify is already landed on ?[0m?[32m?[1m"Informasi"?[0m?[32m page?[0m                                                                   ?[90m# steps.ProductAndCartStepDef.userVerifyIsAlreadyLandedOnInformasiPage(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mUser input alamat field with ?[0m?[32m?[1m"Irsyad - QA Engineer"?[0m?[32m on informasi page?[0m                                               ?[90m# steps.ProductAndCartStepDef.userInputAlamatFieldWithOnInformasiPage(java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mUser verify data item price and product name is correct on informasi page?[0m                                          ?[90m# steps.ProductAndCartStepDef.userVerifyDataItemPriceProductNameQuantityIsCorrectOnInformasiPage()?[0m
+]]></system-out>
+  <system-err><![CDATA[?[32m?[1m┌──────────────────────────────────────────────────────────────────────────┐?[0m
+?[32m?[1m│?[0m View your Cucumber Report at:                                            ?[32m?[1m│?[0m
+?[32m?[1m│?[0m ?[1m?[36m?[4mhttps://reports.cucumber.io/reports/99c43ed5-875c-4323-b7e3-293fe075184c?[0m ?[32m?[1m│?[0m
+?[32m?[1m│?[0m                                                                          ?[32m?[1m│?[0m
+?[32m?[1m│?[0m ?[1mThis report will self-destruct in 24h.?[0m                                   ?[32m?[1m│?[0m
+?[32m?[1m│?[0m Keep reports forever: ?[4m?[1m?[36mhttps://reports.cucumber.io/profile?[0m                ?[32m?[1m│?[0m
+?[32m?[1m└──────────────────────────────────────────────────────────────────────────┘?[0m]]></system-err>
+</testsuite>

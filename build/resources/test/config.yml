@@ -1,0 +1,7 @@
+email: icadskicad8@gmail.com
+password: kmzWAY87aa
+loginPath: /account/login
+database:
+  url: jdbc:mysql://mdb:port/mdb
+  username: root
+  password: root

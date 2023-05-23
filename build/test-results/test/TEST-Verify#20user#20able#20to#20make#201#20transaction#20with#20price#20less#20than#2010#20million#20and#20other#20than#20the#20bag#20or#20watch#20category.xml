@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Verify user able to make 1 transaction with price less than 10 million and other than the bag or watch category" tests="12" skipped="0" failures="0" errors="0" timestamp="2023-05-23T06:07:37" hostname="Icads-MacBook.local" time="43.258">
+  <properties/>
+  <testcase name="User logged into &quot;voila.id&quot;" classname="Verify user able to make 1 transaction with price less than 10 million and other than the bag or watch category" time="13.085"/>
+  <testcase name="User verify is already logged in" classname="Verify user able to make 1 transaction with price less than 10 million and other than the bag or watch category" time="0.823"/>
+  <testcase name="User go to sub-menu &quot;SALE&quot;" classname="Verify user able to make 1 transaction with price less than 10 million and other than the bag or watch category" time="5.263"/>
+  <testcase name="User find product on sale page by sort:" classname="Verify user able to make 1 transaction with price less than 10 million and other than the bag or watch category" time="6.486"/>
+  <testcase name="User choose product number 1 product on sale page" classname="Verify user able to make 1 transaction with price less than 10 million and other than the bag or watch category" time="4.752"/>
+  <testcase name="User click + keranjang button on product page" classname="Verify user able to make 1 transaction with price less than 10 million and other than the bag or watch category" time="1.067"/>
+  <testcase name="User click &quot;Lihat Keranjang&quot; button on popup product added" classname="Verify user able to make 1 transaction with price less than 10 million and other than the bag or watch category" time="4.474"/>
+  <testcase name="User click checkout button on cart page" classname="Verify user able to make 1 transaction with price less than 10 million and other than the bag or watch category" time="4.918"/>
+  <testcase name="User verify is already landed on &quot;Informasi&quot; page" classname="Verify user able to make 1 transaction with price less than 10 million and other than the bag or watch category" time="0.013"/>
+  <testcase name="User input alamat field with &quot;Irsyad - QA Engineer&quot; on informasi page" classname="Verify user able to make 1 transaction with price less than 10 million and other than the bag or watch category" time="0.874"/>
+  <testcase name="User verify data item price and product name is correct on informasi page" classname="Verify user able to make 1 transaction with price less than 10 million and other than the bag or watch category" time="1.104"/>
+  <testcase name="classMethod" classname="Verify user able to make 1 transaction with price less than 10 million and other than the bag or watch category" time="53.35"/>
+  <system-out><![CDATA[
+@test.qa.engineer
+Scenario: Verify user able to make 1 transaction with price less than 10 million and other than the bag or watch category ?[90m# src/test/resources/features/ShoppingCart.feature:4?[0m
+]]></system-out>
+  <system-err><![CDATA[1025 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 113.0.5672.63 (resolved driver for Chrome 113)
+1078 [Test worker] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as /Users/icads/.cache/selenium/chromedriver/mac64/113.0.5672.63/chromedriver
+Starting ChromeDriver 113.0.5672.63 (0e1a4471d5ae5bf128b1bd8f4d627c8cbd55f70c-refs/branch-heads/5672@{#912}) on port 29748
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+May 23, 2023 1:07:36 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+</testsuite>
