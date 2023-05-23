@@ -1,0 +1,25 @@
+1. As you are applying for a senior level position, please explain why you think you are good enough for a senior QA Engineer in Catalyst?
+2. Suppose you are currently working on a high priority task, and then you were asked to help on another high priority task. How would you handle this situation?
+3. What would you do if you were the one and only QA Engineer in your company?
+4. What is your expectation, If you join with Catalyst as a QA Engineer ?
+
+Answer:
+1. As a senior QA Engineer applying for a position at Catalyst, I believe I have the necessary skills, experience, and qualities that make me well-suited for this senior-level role.
+   I have a proven track record in the field of Quality Assurance, with several years of experience working as a QA Engineer. Throughout my career, I have been involved in multiple
+   projects, where I have gained a deep understanding of the QA processes and methodologies. As a senior QA Engineer, I have demonstrated my ability to lead and mentor junior
+   team members. Also, I am committed to continuous learning and improve QA methodologies, tools, and technologies.
+
+2. In a Scenario, I would handle that situation by evaluating the urgency and criticality of both tasks to understand their relative priorities, communicate with the relevant stakeholders
+   involved in both tasks. I would inform them about my current commitments and the request to assist with another high priority task. I would prioritize the tasks based on their impact,
+   deadlines, and available resources (If possible). Also, consider the dependencies, deadlines, and potential bottleneck of each task to develop a realistic schedule.
+   And maintain open and transparent communication with the relevant stakeholders. I would provide regular updates on the progress of each task, highlighting any potential issues or delays.
+
+3. I would like to do some steps like I did before:
+   - Make a Establish QA Process in development team
+   - Create task priority level
+   - Create Automation Test for repetitive case
+   - Work closely with developers to understand software requirements and identify potential issues
+   - Provide training and support to other team members, such as developers or product managers, to enhance their understanding of quality assurance things
+
+ 4. I hope I can help to keep good quality for the catalyst product and build trust in the user that we have a good quality product. So it can increase the number of users.
+    Also, I take look forward to working in a supportive & collaborative environment where teamwork is valued and make catalyst QA Engineering teams to grow up and more.

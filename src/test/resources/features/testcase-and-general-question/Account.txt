@@ -1,0 +1,76 @@
+Feature: Account Page
+
+  @positive.case
+  Scenario: Verify user can see purchase / order history in account page
+    Given User go to login page
+    And User login with user that already have purchase history
+    When User navigate to the account page
+    Then User shoiuld see order history in account page
+
+  @positive.case
+  Scenario: Verify account details (name & email) is corresponding to the time of registration
+    Given User go to login page
+    And User login with a new user that have complete registration
+    When User navigate to the account page
+    Then User verify name & email data is correct
+
+  @positive.case
+  Scenario: Verify user can successfully add new address
+    Given User go to login page
+    And User login with a valid credentials
+    And User navigate to the account page
+    When User click "Lihat Alamat"
+    And User click "Tambahkan Alamat Baru"
+    And User fill in Tambah Alamat form:
+      | FIRST NAME | LAST NAME | COMPANY NAME | ADDRESS 1          | CITY    | COUNTRY   | PROVINCE                      | POSTCODE / ZIP | PHONE       |
+      | Andi       | F. Noya   | Catalyst     | Jl. Kebenaran no.1 | Jakarta | Indonesia | Daerah Khusus Ibukota Jakarta | 12120          | 08526675232 |
+    And User click "ADD ADDRESS" button
+    Then User verify new address is sucessfully added with correct data
+
+    @positive.case
+    Scenario: Verify total address is corresponding with Lihat Alamat (total)
+      Given User go to login page
+      And User login with user that have 2 addresses
+      When User navigate to the account page
+      Then User should see "Lihat Alamat (2)" on account page
+
+    @positive.case
+    Scenario: Verify user able edit address and change to change default address
+      Given User go to login page
+      And User login with user that have 2 addresses
+      And User navigate to the account page
+      And User verify "Alamat A" is set to be default address
+      When User click "Lihat Alamat"
+      And User edit address "Alamat B"
+      And User checkmark "Set as default address?" on edit address page
+      And User click update address
+      And User navigate to the account page
+      Then User verify "Alamat B" is set to be default address
+
+    @negative.case
+    Scenario: Verify user can't access /account/adresses page before logged in
+      Given User go to login page
+      When User change the address on browser "https://voila.id/account/addresses"
+      Then User should be redirected to login page
+
+    @negative.case @bugs (known bugs?)
+    Scenario: Verify user can't back to login page
+      Given User go to login page
+      And User login with a valid credentials
+      And User navigate to the account page
+      When User click previous page button on browser toolbar
+      // Expected:
+      Then User verify still on account page
+      // Current:
+      Then User redirected to login page
+
+    @edge.case @bugs (known bugs?)
+    Scenario: Verify user not able access login page when already logged in
+      Given User go to login page
+      And User login with a valid credentials
+      And User navigate to the account page
+      When User visit the address on browser "https://voila.id/account/login"
+      // Expected:
+      Then User verify still on account page
+      // Current:
+      Then User redirected to login page

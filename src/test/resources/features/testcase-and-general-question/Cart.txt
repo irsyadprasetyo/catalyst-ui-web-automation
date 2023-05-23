@@ -1,0 +1,70 @@
+Feature: Cart
+
+  Background:
+    Given User logged into "voila.id"
+    And User verify is already logged in
+    And User go to sub-menu "SALE"
+    And User find product on sale page by sort:
+      | filter       | productType |
+      | Availability | Shoes       |
+
+  @positive.case
+  Scenario: Verify listed product name, price, size, qty, and total on the cart page are correct according to the user submitted on the product page
+    And User add 1 item to cart
+  // Example Product
+  | productName                          | productPrice  | size | qty |
+  | Cosy BB Leather Flat Mules Black Shw | Rp. 6.800.000 | 43   | 1   |
+    When User go to cart page
+    Then User verify ui is corresponding based on the product page before adding to cart
+
+  @positive.case
+  Scenario: Verify user is able to add product more than 1 item and 1 qty to the cart
+    And User add 3 item to cart
+    // Example Product
+      | productName                   | productPrice  | size | qty |
+      | 2 Sweatpants Black White Grey | Rp. 6.800.000 | M    | 1   |
+      | Slim Long Pants Black Man     | Rp. 6.800.000 | L    | 1   |
+      | Cosy BB Leather Flat          | Rp. 6.800.000 | 43   | 1   |
+    When User go to cart
+    Then User verify ui is corresponding based on the product page before adding to cart
+
+  @positive.case
+  Scenario: Verify user is able to add same product with different size in 1 shopping cart
+    And User add to cart 2 same item with different size
+    When User go to cart page
+    Then User verify ui is corresponding based on the product page before adding to cart
+    And User should see the item will be splitted because item has different size
+
+  @positive.case
+  Scenario: Check all functionality button on cart page
+    And User add 3 item to cart
+    And User go to cart page
+    When User click "Lanjutkan Belanja"
+    Then User should redirect to product list / SALE page
+    And User go to cart page
+    And User go to cart click trash button on one of product list
+    And User should see selected product that removed is disappear from cart page
+    And User go to cart page
+    And User verify able to fill notes with "New Notes"
+    And User click CHECKOUT button on sale page
+    And User should be redirect to Informasi on checkout page
+    And User back to cart page using previous button on browser
+    And User click one of product name on cart page
+    And User verify directed to the product detail page
+    And User click Hapus Semua button on sale page
+    And User shouldn't see any products on cart page
+    And User should see text content "Keranjang Belanja Anda Kosong"
+
+
+  @edge.case
+  Scenario: Verify product can't be checkout when product stock is empty
+    Given User A add to cart product that only have 1 stock
+    // Example Product
+      | productName                   | productPrice  | size | qty |
+      | 2 Sweatpants Black White Grey | Rp. 6.800.000 | M    | 1   |
+    And User B add to cart same product like User A
+    And User A & B go to cart
+    And User A click CHECKOUT button on sale page
+    And User A do complete transaction until payment
+    When User B click CHECKOUT button on sale page
+    Then User B verify can't continue the checkout process because the stock is already empty

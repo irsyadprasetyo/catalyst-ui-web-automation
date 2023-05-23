@@ -1,0 +1,77 @@
+Feature: User Registration
+
+  Background:
+    #  As a new user, I want to create new account. So, I can access the features of the website
+    Given User go to registration page "https://voila.id/account/register"
+    And User on the registration page
+
+  @positive.case
+  Scenario: Verify user successfully do registration by filling all required fields and make sure the user will receive account confirmation in their email
+    And User input a first name
+    And User input a last name
+    And User input a valid email
+    And User input a valid password (>= 5 char)
+    When User click on the "Daftar" button
+    Then User should be redirected to home page
+    And User should be automatically logged in by visiting account page
+    And User user open their email
+    And User verify that receive email account confirmation from voila.id that have subject "Konfirmasi akun pelanggan"
+
+  @positive.case
+  Scenario: Verify user successful do registration with filling all field with minimum requirements
+    And User input a first name "a"
+    And User input a last name "b"
+    And User input a email "c@mailinator.com"
+    And User input a weak password "12345"
+    When User click on the "Daftar" button
+    Then User should be redirected to home page
+    And User should be automatically logged in
+
+  @negative.case
+  Scenario: Verify all field alert is appear when user hit "Daftar" button without filling any require fields
+    Given User on the registration page
+    And User leave the first name field blank
+    And User leave the second name field blank
+    And User leave the email address field blank
+    And User leave the password field blank
+    And User click on the "Daftar" button
+    Then User should see an error message for the missing required fields
+    # Current: only the first field (field first name) shows the error. Other required fields didn't show alert
+
+  @negative.case
+  Scenario: Verify user will fail to register when leaving blank one of the required fields (e.g: last name field)
+    And User input a first name
+    When User leave the first name field blank
+    And User input a valid email
+    And User input a valid password (>= 5 char)
+    And User click on the "Daftar" button
+    Then User should see an error message that asking user to fill last name field
+
+  @negative.case
+  Scenario: Verify user will fail to regsiter when email format isn't correct
+    And User input a first name
+    And User input a last name
+    When User input invalid format email "kompas.com"
+    And User input a valid password (>= 5 char)
+    And User click on the "Daftar" button
+    Then User should see an error on email field "Please include '@' in the email address"
+
+  @negative.case
+  Scenario: Verify the UI will show the alert when user fill password less than 5 characters
+    And User input a first name
+    And User input a last name
+    And User input a valid email
+    And User input a valid password (< 5 char)
+    When User click on the "Daftar" button
+    Then User should see an alert "Sandi terlalu pendek (minimum berisi 5 karakter)"
+
+    Notes:
+    * Add notification for successfully registered users.
+      After user complete registration, some site will gave alert to notice the user that registerations is already complete and ask
+      the user for checking email for account confirmation.
+    * If the user fills the password with less than 5 characters, the alert will show after the page directed back to the registration page
+      with the condition that is a field that the user already filled in is blank. It will be user friendly if the alert immediately appears
+      after the user clicks "Daftar"
+    * The alert only show the first field (first name) when all fields are still blank
+    * Password must be at least 8 char mix with capital letters and numbers for better security
+    * Disallowed temporary email for user (e.g '@mailinator.com') when do registration on production
