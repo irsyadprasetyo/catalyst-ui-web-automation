@@ -25,6 +25,7 @@ public class ProductAndCartPage {
 
   public void clickModalPopUpButton(String option) {
     if (option.equalsIgnoreCase("lihat keranjang")) {
+      page.waitUntilVisible(LIHAT_KERANJANG_BUTTON);
       page.clickOn(LIHAT_KERANJANG_BUTTON);
     } else {
       page.clickOn(LANJUTKAN_BELANJA_BUTTON);

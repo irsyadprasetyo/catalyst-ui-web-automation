@@ -3,11 +3,11 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2023-05-23T16:26:00.203Z",
+        "start_timestamp": "2023-05-23T17:15:37.350Z",
         "before": [
           {
             "result": {
-              "duration": 4407942000,
+              "duration": 3483933000,
               "status": "passed"
             },
             "match": {
@@ -22,7 +22,7 @@
         "after": [
           {
             "result": {
-              "duration": 165052000,
+              "duration": 165975000,
               "status": "passed"
             },
             "match": {
@@ -35,7 +35,7 @@
         "steps": [
           {
             "result": {
-              "duration": 7426403000,
+              "duration": 7308152000,
               "status": "passed"
             },
             "line": 5,
@@ -53,7 +53,7 @@
           },
           {
             "result": {
-              "duration": 226492000,
+              "duration": 365113000,
               "status": "passed"
             },
             "line": 6,
@@ -65,7 +65,7 @@
           },
           {
             "result": {
-              "duration": 2944554000,
+              "duration": 2708075000,
               "status": "passed"
             },
             "line": 7,
@@ -83,7 +83,7 @@
           },
           {
             "result": {
-              "duration": 2988842000,
+              "duration": 2680215000,
               "status": "passed"
             },
             "line": 8,
@@ -113,15 +113,15 @@
           },
           {
             "result": {
-              "duration": 2170587000,
+              "duration": 3765975000,
               "status": "passed"
             },
             "line": 11,
-            "name": "User choose product number 1 product on sale page",
+            "name": "User choose product number 10 product on sale page",
             "match": {
               "arguments": [
                 {
-                  "val": "1",
+                  "val": "10",
                   "offset": 27
                 }
               ],
@@ -131,7 +131,7 @@
           },
           {
             "result": {
-              "duration": 500965000,
+              "duration": 388146000,
               "status": "passed"
             },
             "line": 12,
@@ -143,7 +143,7 @@
           },
           {
             "result": {
-              "duration": 3655825000,
+              "duration": 5292305000,
               "status": "passed"
             },
             "line": 13,
@@ -161,7 +161,7 @@
           },
           {
             "result": {
-              "duration": 2843755000,
+              "duration": 28055052000,
               "status": "passed"
             },
             "line": 14,
@@ -173,8 +173,9 @@
           },
           {
             "result": {
-              "duration": 10868000,
-              "status": "passed"
+              "error_message": "java.lang.AssertionError: title isn\u0027t eq with text\n\tat org.junit.Assert.fail(Assert.java:89)\n\tat org.junit.Assert.assertTrue(Assert.java:42)\n\tat steps.ProductAndCartStepDef.userVerifyIsAlreadyLandedOnInformasiPage(ProductAndCartStepDef.java:60)\n\tat ✽.User verify is already landed on \"Informasi\" page(file:///Users/icads/Repository/Interview-Task/catalyst/catalyst-ui-automation-test/src/test/resources/features/ShoppingCart.feature:15)\n",
+              "duration": 8762946000,
+              "status": "failed"
             },
             "line": 15,
             "name": "User verify is already landed on \"Informasi\" page",
@@ -191,8 +192,8 @@
           },
           {
             "result": {
-              "duration": 348585000,
-              "status": "passed"
+              "duration": 1489000,
+              "status": "skipped"
             },
             "line": 16,
             "name": "User input alamat field with \"Irsyad - QA Engineer\" on informasi page",
@@ -209,8 +210,8 @@
           },
           {
             "result": {
-              "duration": 436030000,
-              "status": "passed"
+              "duration": 509000,
+              "status": "skipped"
             },
             "line": 17,
             "name": "User verify data item price and product name is correct on informasi page",

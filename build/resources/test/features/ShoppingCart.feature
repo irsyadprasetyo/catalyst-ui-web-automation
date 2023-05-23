@@ -8,7 +8,7 @@ Feature: Shopping Cart
     And User find product on sale page by sort:
       | category | productType | filter       | maxPrice |
       | Clothing | Dress       | Availability | 9999999  |
-    And User choose product number 1 product on sale page
+    And User choose product number 10 product on sale page
     When User click + keranjang button on product page
     And User click "Lihat Keranjang" button on popup product added
     And User click checkout button on cart page

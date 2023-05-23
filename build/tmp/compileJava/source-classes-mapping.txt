@@ -20,7 +20,7 @@ pages/SalePage.java
  pages.SalePage
 pages/LoginPage.java
  pages.LoginPage
-pages/ProductAndCartPage.java
- pages.ProductAndCartPage
 data/ProductData.java
  data.ProductData
+pages/ProductAndCartPage.java
+ pages.ProductAndCartPage
